@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080808" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Datenschutzerklärung für die Website von Kai Thürmer Tattoo in Lippstadt." />
+  <link rel="icon" href="assets/kai-thuermer-logo.png" type="image/png" />
+  <title>Datenschutzerklärung | Kai Thürmer Tattoo</title>
+  <style>
+    :root {
+      --ink:#080808;
+      --ink-soft:#131313;
+      --bone:#e7e0d3;
+      --bone-dark:#c7bcaa;
+      --steel:#8b8b86;
+      --ink-blue:#24495d;
+      --ink-blue-bright:#6f9aae;
+      --line:rgba(231,224,211,.18);
+      --max:1240px;
+      --pad:clamp(20px,4vw,64px);
+      --display:"Arial Black","Helvetica Neue",Arial,sans-serif;
+      --body:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{background:var(--ink);scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--bone);
+      background:
+        radial-gradient(circle at 88% 6%,rgba(36,73,93,.18),transparent 28rem),
+        radial-gradient(circle at 10% 80%,rgba(231,224,211,.05),transparent 32rem),
+        var(--ink);
+      font-family:var(--body);
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    a:focus-visible{outline:3px solid var(--bone);outline-offset:4px;border-radius:2px}
+    ::selection{background:var(--ink-blue);color:#fff}
+    .container{width:min(var(--max),100%);margin:0 auto;padding-inline:var(--pad)}
+    .skip-link{position:fixed;top:12px;left:12px;z-index:100;transform:translateY(-180%);padding:12px 16px;background:var(--bone);color:var(--ink);font-weight:900;transition:transform .18s ease}
+    .skip-link:focus-visible{transform:translateY(0);outline-color:var(--ink-blue-bright)}
+    header{
+      position:relative;
+      z-index:30;
+      border-bottom:1px solid var(--line);
+      background:rgba(8,8,8,.8);
+      backdrop-filter:blur(18px);
+    }
+    .nav{height:104px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .logo{width:clamp(190px,19vw,270px)}
+    .logo img{max-height:84px;object-fit:contain;object-position:left center;filter:drop-shadow(0 3px 12px rgba(0,0,0,.55))}
+    .back{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      min-height:48px;
+      padding:0 18px;
+      border:1px solid var(--bone);
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-size:11px;
+      font-weight:900;
+      transition:.2s ease;
+    }
+    .back:hover,.back:focus-visible{background:var(--bone);color:var(--ink);transform:translateY(-2px)}
+    main{position:relative;z-index:2}
+    .hero{padding:clamp(90px,12vw,170px) 0 clamp(52px,7vw,90px);border-bottom:1px solid var(--line)}
+    .eyebrow{display:flex;align-items:center;gap:12px;color:var(--bone-dark);text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:900}
+    .eyebrow::before{content:"";width:34px;height:2px;background:var(--ink-blue)}
+    h1{
+      margin:24px 0 0;
+      max-width:1080px;
+      font-family:var(--display);
+      font-size:clamp(64px,12vw,170px);
+      line-height:.84;
+      letter-spacing:-.055em;
+      text-transform:uppercase;
+    }
+    h1 span{display:block;color:rgba(231,224,211,.1);-webkit-text-stroke:2px var(--bone);text-shadow:0 8px 38px rgba(0,0,0,.8)}
+    .intro{max-width:760px;margin:38px 0 0;color:#d2cbc0;font-size:clamp(17px,1.5vw,21px);line-height:1.75}
+    .content{padding:clamp(70px,9vw,130px) 0}
+    .legal-grid{display:grid;grid-template-columns:minmax(220px,.55fr) minmax(0,1.45fr);gap:clamp(40px,8vw,120px);align-items:start}
+    .index{position:sticky;top:30px;border-top:1px solid var(--line);padding-top:22px;color:var(--steel);font-size:10px;line-height:1.75;letter-spacing:.12em;text-transform:uppercase}
+    .index strong{display:block;color:var(--bone);font-size:12px;margin-bottom:12px}
+    .index a{display:block;padding:5px 0;transition:.2s ease}
+    .index a:hover,.index a:focus-visible{color:var(--bone);transform:translateX(4px)}
+    .legal{display:grid;gap:22px}
+    .panel{scroll-margin-top:24px;padding:clamp(26px,4vw,48px);border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .panel h2{margin:0 0 22px;font-family:var(--display);font-size:clamp(27px,3.7vw,50px);line-height:1.03;text-transform:uppercase;letter-spacing:-.025em}
+    .panel h3{margin:30px 0 12px;font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+    .panel p,.panel address,.panel li{color:#d2cbc0;font-style:normal;line-height:1.8;font-size:16px}
+    .panel p,.panel li{max-width:72ch}
+    .panel p{margin:0}
+    .panel p+p{margin-top:18px}
+    .panel ul{margin:16px 0 0;padding-left:20px}
+    .panel li+li{margin-top:8px}
+    .panel a{color:var(--bone);font-weight:800;border-bottom:1px solid var(--ink-blue);overflow-wrap:anywhere}
+    .panel strong{color:var(--bone)}
+    .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:22px;background:var(--line);border:1px solid var(--line)}
+    .fact{background:var(--ink-soft);padding:22px}
+    .fact span{display:block;margin-bottom:7px;color:var(--steel);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+    .fact strong{font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+    .notice{margin-top:22px;padding:18px 20px;border-left:3px solid var(--ink-blue);background:rgba(36,73,93,.16);color:#ded6c9;line-height:1.7}
+    footer{position:relative;z-index:2;padding:38px 0 100px;border-top:1px solid rgba(8,8,8,.24);background:var(--bone);color:var(--ink)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
+    .footer-logo{display:block;width:min(270px,65vw);height:auto;max-height:120px;aspect-ratio:940 / 419;object-fit:contain;object-position:left center;filter:invert(1);opacity:.94}
+    .footer-meta{text-align:right;color:#655f57;font-size:10px;line-height:1.9;letter-spacing:.12em;text-transform:uppercase}
+    .footer-meta a{color:var(--ink);font-weight:900}
+    .credit{margin-top:10px;padding-top:10px;border-top:1px solid rgba(8,8,8,.22)}
+    .credit a{color:var(--ink-blue)}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.skip-link,.back,.index a{transition:none}.back:hover,.back:focus-visible,.index a:hover,.index a:focus-visible{transform:none}}
+    @media(max-width:760px){
+      .nav{height:80px}.logo{width:150px}.logo img{max-height:66px}.back{padding:0 13px;font-size:9px}.legal-grid{grid-template-columns:1fr}.index{position:static}.facts{grid-template-columns:1fr}.footer-inner{align-items:flex-start;flex-direction:column}.footer-meta{text-align:left}h1{font-size:clamp(54px,18vw,95px)}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Zur Startseite von Kai Thürmer Tattoo">
+        <img src="assets/kai-thuermer-logo.png" alt="Kai Thürmer Tattoo" width="940" height="419" />
+      </a>
+      <nav aria-label="Seitennavigation">
+        <a class="back" href="index.html"><span aria-hidden="true">←</span> Zur Startseite</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Schutz deiner Daten</div>
+        <h1>Daten<span>schutz</span></h1>
+        <p class="intro">Informationen darüber, welche personenbezogenen Daten beim Besuch dieser Website und bei einer Kontaktaufnahme verarbeitet werden.</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container legal-grid">
+        <nav class="index" aria-label="Inhalt der Datenschutzerklärung">
+          <strong>Inhalt</strong>
+          <a href="#verantwortlich">01 · Verantwortlicher</a>
+          <a href="#website">02 · Website &amp; Serverdaten</a>
+          <a href="#kontakt">03 · Kontaktaufnahme</a>
+          <a href="#dienste">04 · Externe Dienste</a>
+          <a href="#cookies">05 · Cookies &amp; Analyse</a>
+          <a href="#rechte">06 · Deine Rechte</a>
+          <a href="#sicherheit">07 · Sicherheit &amp; Stand</a>
+        </nav>
+
+        <div class="legal">
+          <section class="panel" id="verantwortlich">
+            <h2>01 · Verantwortlicher</h2>
+            <p>Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist:</p>
+            <div class="facts">
+              <div class="fact"><span>Anbieter</span><strong>Kai Thürmer Tattoo</strong></div>
+              <div class="fact"><span>Studioanschrift</span><strong>Helle Halle 6<br />59555 Lippstadt</strong></div>
+              <div class="fact"><span>Inhaber</span><strong>Kai Thürmer</strong></div>
+              <div class="fact"><span>Postanschrift</span><strong>Lange Straße 5<br />59555 Lippstadt</strong></div>
+              <div class="fact"><span>E-Mail</span><strong><a href="mailto:kai-th-tattoo@gmx.de">kai-th-tattoo@gmx.de</a></strong></div>
+              <div class="fact"><span>Studio-Telefon</span><strong><a href="tel:+4929412985526">+49 2941 2985526</a></strong></div>
+            </div>
+          </section>
+
+          <section class="panel" id="website">
+            <h2>02 · Website &amp; Serverdaten</h2>
+            <p>Beim Aufruf dieser Website werden durch den Browser technisch notwendige Informationen an den Server übermittelt. Dazu können insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite oder Datei, Referrer-URL, Browsertyp, Betriebssystem und Internetzugangsanbieter gehören.</p>
+            <p>Diese Daten werden verarbeitet, um die Website technisch bereitzustellen, einen stabilen und sicheren Betrieb zu gewährleisten und mögliche Angriffe oder Fehlfunktionen nachvollziehen zu können. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt im sicheren und funktionsfähigen Betrieb der Website.</p>
+            <p>Server-Protokolldaten werden nur so lange gespeichert, wie dies für Betrieb, Sicherheit und Fehleranalyse erforderlich ist, und anschließend gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten oder sicherheitsrelevanten Gründe entgegenstehen.</p>
+          </section>
+
+          <section class="panel" id="kontakt">
+            <h2>03 · Kontaktaufnahme</h2>
+            <h3>E-Mail, Telefon und Tattooanfrage</h3>
+            <p>Bei einer Kontaktaufnahme per E-Mail, Telefon oder über die auf der Website vorbereitete Tattooanfrage werden die von dir mitgeteilten Angaben verarbeitet, um deine Anfrage zu beantworten, einen Beratungstermin vorzubereiten oder einen Vertrag anzubahnen und abzuwickeln.</p>
+            <p>Das Anfrageformular dieser Website übermittelt im aktuellen Aufbau keine Daten an eine eigene Formulardatenbank. Beim Absenden wird dein lokal eingerichtetes E-Mail-Programm mit den eingetragenen Angaben geöffnet. Eine Übermittlung findet erst statt, wenn du die E-Mail selbst versendest.</p>
+            <p>Rechtsgrundlage ist je nach Inhalt der Anfrage Art. 6 Abs. 1 lit. b DSGVO oder Art. 6 Abs. 1 lit. f DSGVO. Soweit eine Einwilligung erforderlich ist, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.</p>
+            <p>Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungsfristen oder berechtigten Interessen an einer weiteren Speicherung bestehen.</p>
+          </section>
+
+          <section class="panel" id="dienste">
+            <h2>04 · Externe Dienste</h2>
+            <h3>WhatsApp</h3>
+            <p>Die Website enthält einen freiwilligen Link für Tattooanfragen über WhatsApp. Erst wenn du diesen Link anklickst, wird eine Verbindung zu WhatsApp hergestellt. Dabei können technische Daten wie deine IP-Adresse sowie weitere Nutzungs- und Gerätedaten durch WhatsApp beziehungsweise verbundene Meta-Unternehmen verarbeitet und gegebenenfalls in Drittländer übermittelt werden.</p>
+            <p>Die Nutzung von WhatsApp ist freiwillig. Als datensparsame Alternative stehen E-Mail und Telefon zur Verfügung. Weitere Informationen findest du in der <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer" aria-label="Datenschutzrichtlinie von WhatsApp, öffnet in einem neuen Tab">Datenschutzrichtlinie von WhatsApp <span aria-hidden="true">↗</span></a>.</p>
+
+            <h3>Instagram</h3>
+            <p>Auf dieser Website ist lediglich ein externer Link zum Instagram-Profil von Kai Thürmer Tattoo eingebunden. Es wird kein Instagram-Feed und kein Social-Media-Plugin automatisch geladen. Erst beim Anklicken des Links verlässt du diese Website; anschließend gelten die Datenschutzbestimmungen von Instagram beziehungsweise Meta.</p>
+            <p>Weitere Informationen findest du in der <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener noreferrer" aria-label="Datenschutzrichtlinie von Instagram, öffnet in einem neuen Tab">Datenschutzrichtlinie von Instagram <span aria-hidden="true">↗</span></a>.</p>
+
+            <h3>Lokal eingebundene Bilder</h3>
+            <p>Die Bilder von Kai und dem Studio werden als Bestandteile dieser Website vom selben Server geladen. Für die Bilddarstellung wird keine Verbindung zu einem externen Bilddienst hergestellt.</p>
+          </section>
+
+          <section class="panel" id="cookies">
+            <h2>05 · Cookies &amp; Analyse</h2>
+            <p>Diese Website setzt im derzeitigen Aufbau keine eigenen Analyse-, Marketing- oder Trackingdienste ein. Es werden keine nicht technisch notwendigen Cookies durch die Website gesetzt.</p>
+            <p>Die interaktive Tattoo-Zeichenfläche arbeitet ausschließlich im Browser. Die dort erstellten Zeichnungen werden weder dauerhaft gespeichert noch an einen Server übertragen.</p>
+            <div class="notice">Sollten später Analysewerkzeuge, eingebettete Karten, Social-Media-Feeds, ein Newsletter oder ein serverseitiges Formular ergänzt werden, wird diese Datenschutzerklärung entsprechend aktualisiert und – soweit erforderlich – eine Einwilligung eingeholt.</div>
+          </section>
+
+          <section class="panel" id="rechte">
+            <h2>06 · Deine Rechte</h2>
+            <p>Dir stehen nach Maßgabe der gesetzlichen Voraussetzungen insbesondere folgende Rechte zu:</p>
+            <ul>
+              <li>Auskunft über die verarbeiteten personenbezogenen Daten nach Art. 15 DSGVO,</li>
+              <li>Berichtigung unrichtiger Daten nach Art. 16 DSGVO,</li>
+              <li>Löschung nach Art. 17 DSGVO,</li>
+              <li>Einschränkung der Verarbeitung nach Art. 18 DSGVO,</li>
+              <li>Datenübertragbarkeit nach Art. 20 DSGVO,</li>
+              <li>Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen nach Art. 21 DSGVO,</li>
+              <li>Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft nach Art. 7 Abs. 3 DSGVO.</li>
+            </ul>
+            <p>Zur Ausübung deiner Rechte genügt eine Nachricht an <a href="mailto:kai-th-tattoo@gmx.de">kai-th-tattoo@gmx.de</a>.</p>
+            <h3>Beschwerderecht</h3>
+            <p>Du hast außerdem das Recht, dich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten zu beschweren. Zuständig ist insbesondere die Aufsichtsbehörde des Bundeslandes, in dem der Verantwortliche seinen Sitz hat.</p>
+          </section>
+
+          <section class="panel" id="sicherheit">
+            <h2>07 · Sicherheit &amp; Stand</h2>
+            <p>Die Website ist für die Bereitstellung über eine verschlüsselte HTTPS-Verbindung vorgesehen. Dadurch werden übertragene Daten vor dem unbefugten Mitlesen geschützt. Ein vollständiger Schutz bei der Datenübertragung im Internet kann dennoch nicht garantiert werden.</p>
+            <p>Diese Datenschutzerklärung kann angepasst werden, wenn sich technische Funktionen, eingesetzte Dienstleister oder gesetzliche Anforderungen ändern.</p>
+            <p><strong>Stand: Juli 2026</strong></p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <img class="footer-logo" src="assets/kai-thuermer-logo.png" alt="" width="940" height="419" />
+      <div class="footer-meta">
+        <div>© 2026 Kai Thürmer Tattoo</div>
+        <nav aria-label="Rechtliche Navigation"><a href="index.html">Startseite</a> · <a href="impressum.html">Impressum</a></nav>
+        <div class="credit">Homepage erstellt von <a href="https://dasgeil.de" target="_blank" rel="noopener noreferrer" aria-label="dasgeil.de, öffnet in einem neuen Tab">dasgeil <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

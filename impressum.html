@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080808" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Impressum und verantwortliche Kontaktangaben von Kai Thürmer Tattoo in Lippstadt." />
+  <link rel="icon" href="assets/kai-thuermer-logo.png" type="image/png" />
+  <title>Impressum | Kai Thürmer Tattoo</title>
+  <style>
+    :root {
+      --ink:#080808;
+      --ink-soft:#131313;
+      --bone:#e7e0d3;
+      --bone-dark:#c7bcaa;
+      --steel:#8b8b86;
+      --ink-blue:#24495d;
+      --ink-blue-bright:#6f9aae;
+      --line:rgba(231,224,211,.18);
+      --max:1240px;
+      --pad:clamp(20px,4vw,64px);
+      --display:"Arial Black","Helvetica Neue",Arial,sans-serif;
+      --body:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{background:var(--ink);scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--bone);
+      background:
+        radial-gradient(circle at 88% 6%,rgba(36,73,93,.18),transparent 28rem),
+        radial-gradient(circle at 10% 80%,rgba(231,224,211,.05),transparent 32rem),
+        var(--ink);
+      font-family:var(--body);
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    a:focus-visible{outline:3px solid var(--bone);outline-offset:4px;border-radius:2px}
+    ::selection{background:var(--ink-blue);color:#fff}
+    .container{width:min(var(--max),100%);margin:0 auto;padding-inline:var(--pad)}
+    .skip-link{position:fixed;top:12px;left:12px;z-index:100;transform:translateY(-180%);padding:12px 16px;background:var(--bone);color:var(--ink);font-weight:900;transition:transform .18s ease}
+    .skip-link:focus-visible{transform:translateY(0);outline-color:var(--ink-blue-bright)}
+    header{
+      position:relative;
+      z-index:30;
+      border-bottom:1px solid var(--line);
+      background:rgba(8,8,8,.8);
+      backdrop-filter:blur(18px);
+    }
+    .nav{height:104px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .logo{width:clamp(190px,19vw,270px)}
+    .logo img{max-height:84px;object-fit:contain;object-position:left center;filter:drop-shadow(0 3px 12px rgba(0,0,0,.55))}
+    .back{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      min-height:48px;
+      padding:0 18px;
+      border:1px solid var(--bone);
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-size:11px;
+      font-weight:900;
+      transition:.2s ease;
+    }
+    .back:hover,.back:focus-visible{background:var(--bone);color:var(--ink);transform:translateY(-2px)}
+    main{position:relative;z-index:2}
+    .hero{padding:clamp(90px,12vw,170px) 0 clamp(52px,7vw,90px);border-bottom:1px solid var(--line)}
+    .eyebrow{display:flex;align-items:center;gap:12px;color:var(--bone-dark);text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:900}
+    .eyebrow::before{content:"";width:34px;height:2px;background:var(--ink-blue)}
+    h1{
+      margin:24px 0 0;
+      max-width:1000px;
+      font-family:var(--display);
+      font-size:clamp(48px,15cqi,190px);
+      line-height:.82;
+      letter-spacing:-.055em;
+      text-transform:uppercase;
+      container-type:inline-size;
+    }
+    h1 span{display:block;color:rgba(231,224,211,.1);-webkit-text-stroke:2px var(--bone);text-shadow:0 8px 38px rgba(0,0,0,.8)}
+    .intro{max-width:700px;margin:38px 0 0;color:#d2cbc0;font-size:clamp(17px,1.5vw,21px);line-height:1.75}
+    .content{padding:clamp(70px,9vw,130px) 0}
+    .legal-grid{display:grid;grid-template-columns:minmax(210px,.55fr) minmax(0,1.45fr);gap:clamp(40px,8vw,120px);align-items:start}
+    .index{position:sticky;top:30px;min-width:0;border-top:1px solid var(--line);padding-top:22px;color:var(--steel);font-size:10px;line-height:2;letter-spacing:.14em;text-transform:uppercase}
+    .index strong{display:block;color:var(--bone);font-size:12px;margin-bottom:12px}
+    .index a{display:block;padding:5px 0;transition:.2s ease}
+    .index a:hover,.index a:focus-visible{color:var(--bone);transform:translateX(4px)}
+    .legal{display:grid;gap:22px;min-width:0}
+    .panel{scroll-margin-top:24px;padding:clamp(26px,4vw,48px);border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .panel h2{margin:0 0 22px;font-family:var(--display);font-size:clamp(28px,4vw,54px);line-height:1;text-transform:uppercase;letter-spacing:-.025em}
+    .panel p,.panel address{margin:0;color:#d2cbc0;font-style:normal;line-height:1.8;font-size:16px}
+    .panel p{max-width:72ch}
+    .panel p+p{margin-top:18px}
+    .panel a{color:var(--bone);font-weight:800;border-bottom:1px solid var(--ink-blue)}
+    .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+    .fact{background:var(--ink-soft);padding:22px}
+    .fact span{display:block;margin-bottom:7px;color:var(--steel);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+    .fact strong{font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+    footer{position:relative;z-index:2;padding:38px 0 100px;border-top:1px solid rgba(8,8,8,.24);background:var(--bone);color:var(--ink)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
+    .footer-logo{display:block;width:min(270px,65vw);height:auto;max-height:120px;aspect-ratio:940 / 419;object-fit:contain;object-position:left center;filter:invert(1);opacity:.94}
+    .footer-meta{text-align:right;color:#655f57;font-size:10px;line-height:1.9;letter-spacing:.12em;text-transform:uppercase}
+    .footer-meta a{color:var(--ink);font-weight:900}
+    .credit{margin-top:10px;padding-top:10px;border-top:1px solid rgba(8,8,8,.22)}
+    .credit a{color:var(--ink-blue)}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.skip-link,.back,.index a{transition:none}.back:hover,.back:focus-visible,.index a:hover,.index a:focus-visible{transform:none}}
+    @media(max-width:760px){
+      .nav{height:80px}.logo{width:150px}.logo img{max-height:66px}.back{padding:0 13px;font-size:9px}.legal-grid{grid-template-columns:1fr}.index{position:static}.facts{grid-template-columns:1fr}.footer-inner{align-items:flex-start;flex-direction:column}.footer-meta{text-align:left}h1{font-size:clamp(40px,15cqi,110px)}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Zur Startseite von Kai Thürmer Tattoo">
+        <img src="assets/kai-thuermer-logo.png" alt="Kai Thürmer Tattoo" width="940" height="419" />
+      </a>
+      <nav aria-label="Seitennavigation">
+        <a class="back" href="index.html"><span aria-hidden="true">←</span> Zur Startseite</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Rechtliche Informationen</div>
+        <h1>Im<span>pressum</span></h1>
+        <p class="intro">Anbieter- und Kontaktinformationen von Kai Thürmer Tattoo.</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container legal-grid">
+        <nav class="index" aria-label="Inhalt des Impressums">
+          <strong>Inhalt</strong>
+          <a href="#anbieter">Anbieter &amp; Kontakt</a>
+          <a href="#hinweise">Haftung &amp; Urheberrecht</a>
+        </nav>
+
+        <div class="legal">
+          <section class="panel" id="anbieter">
+            <h2>Anbieter</h2>
+            <address>
+              <strong>Kai Thürmer Tattoo</strong><br />
+              Studioanschrift:<br />
+              Helle Halle 6<br />
+              59555 Lippstadt
+            </address>
+          </section>
+
+          <section class="panel">
+            <h2>Inhaber &amp; Kontakt</h2>
+            <div class="facts">
+              <div class="fact"><span>Inhaber</span><strong>Kai Thürmer</strong></div>
+              <div class="fact"><span>Postanschrift</span><strong>Lange Straße 5<br />59555 Lippstadt</strong></div>
+              <div class="fact"><span>E-Mail</span><strong><a href="mailto:kai-th-tattoo@gmx.de">kai-th-tattoo@gmx.de</a></strong></div>
+              <div class="fact"><span>Studio-Telefon</span><strong><a href="tel:+4929412985526">+49 2941 2985526</a></strong></div>
+              <div class="fact"><span>WhatsApp für Tattooanfragen</span><strong><a href="https://wa.me/4915174128106" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp für Tattooanfragen, öffnet in einem neuen Tab">+49 1517 4128106 <span aria-hidden="true">↗</span></a></strong></div>
+            </div>
+          </section>
+
+          <section class="panel" id="hinweise">
+            <h2>Haftung &amp; Urheberrecht</h2>
+            <p>Eine Haftung für die Richtigkeit und Aktualität sämtlicher hier erteilter Informationen, Links und sonstiger Angaben sowie deren Vollständigkeit wird nicht übernommen.</p>
+            <p>Sämtliche Inhalte dieser Website unterliegen – soweit gesetzlich möglich – dem Urheberrecht. Die Fotos auf dieser Website sind urheberrechtlich geschützt. Eine Verwendung oder ein Download von Fotos, Bildern oder Texten ohne ausdrückliche Genehmigung ist nicht gestattet.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <img class="footer-logo" src="assets/kai-thuermer-logo.png" alt="" width="940" height="419" />
+      <div class="footer-meta">
+        <div>© 2026 Kai Thürmer Tattoo</div>
+        <nav aria-label="Rechtliche Navigation"><a href="index.html">Startseite</a> · <a href="datenschutz.html">Datenschutz</a></nav>
+        <div class="credit">Homepage erstellt von <a href="https://dasgeil.de" target="_blank" rel="noopener noreferrer" aria-label="dasgeil.de, öffnet in einem neuen Tab">dasgeil <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
