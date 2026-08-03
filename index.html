@@ -5,24 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#080808" />
   <meta name="robots" content="index,follow" />
-  <meta name="description" content="Kai Thürmer Tattoo in Lippstadt: individuelle Tattoos in Blackwork, Dotwork, Mandala, Fineline und Lettering. Termine nach Vereinbarung." />
-  <meta property="og:title" content="Kai Thürmer Tattoo · Lippstadt" />
-  <meta property="og:description" content="Individuelle Tattoos in Blackwork, Dotwork, Mandala, Fineline und Lettering. Termine nach Vereinbarung." />
+  <meta name="description" content="Kai Thürmer tätowiert individuelle Motive in Lippstadt – Blackwork, Dotwork, Fineline, Mandala und Lettering. Besprechung und Termine nach Vereinbarung." />
+  <meta name="author" content="Kai Thürmer" />
+  <link rel="canonical" href="https://www.kai-th-tattoo.de/" />
+  <meta property="og:title" content="Tattoo Studio Lippstadt | Kai Thürmer" />
+  <meta property="og:description" content="Individuelle Tattoos in Lippstadt: Blackwork, Dotwork, Fineline, Mandala und Lettering. Besprechung und Termine nach Vereinbarung." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="Kai Thürmer Tattoo" />
+  <meta property="og:url" content="https://www.kai-th-tattoo.de/" />
+  <meta property="og:image" content="https://www.kai-th-tattoo.de/assets/kai-hero.jpg" />
+  <meta property="og:image:alt" content="Kai Thürmer in seinem Tattoo-Studio in Lippstadt" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="1200" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tattoo Studio Lippstadt | Kai Thürmer" />
+  <meta name="twitter:description" content="Individuelle Tattoos in Lippstadt: Blackwork, Dotwork, Fineline, Mandala und Lettering." />
+  <meta name="twitter:image" content="https://www.kai-th-tattoo.de/assets/kai-hero.jpg" />
   <link rel="icon" href="assets/kai-thuermer-logo.png" type="image/png" />
   <link rel="preload" as="image" href="assets/kai-hero.webp" type="image/webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <title>Kai Thürmer Tattoo in Lippstadt | Individuelle Tattoos</title>
+  <title>Tattoo Studio Lippstadt | Kai Thürmer – individuelle Tattoos</title>
   <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "TattooParlor",
+      "@id": "https://www.kai-th-tattoo.de/#business",
       "name": "Kai Thürmer Tattoo",
       "description": "Individuelle Tattoos in Blackwork, Dotwork, Mandala, Fineline und Lettering.",
+      "url": "https://www.kai-th-tattoo.de/",
+      "image": [
+        "https://www.kai-th-tattoo.de/assets/kai-hero.jpg",
+        "https://www.kai-th-tattoo.de/assets/kai-portrait.jpg"
+      ],
+      "logo": "https://www.kai-th-tattoo.de/assets/kai-thuermer-logo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Helle Halle 6",
@@ -32,7 +52,13 @@
       },
       "telephone": "+4929412985526",
       "email": "kai-th-tattoo@gmx.de",
-      "sameAs": ["https://instagram.com/kai_th_tattoo"]
+      "sameAs": ["https://www.instagram.com/kai_th_tattoo"],
+      "founder": {
+        "@type": "Person",
+        "name": "Kai Thürmer",
+        "jobTitle": "Tattoo Artist",
+        "sameAs": "https://www.instagram.com/kai_th_tattoo"
+      }
     }
   </script>
   <style>
@@ -52,10 +78,6 @@
       --ink-blue: var(--ink-coral);
       --ink-blue-bright: var(--ink-coral-bright);
       --ink-blue-lit: var(--ink-coral-lit);
-      /* Muted tattoo blue sampled from the supplied reference image. */
-      --ink-tattoo-deep: #324160;
-      --ink-tattoo: #324160;
-      --ink-tattoo-lit: #324160;
       /* UI accent: visible ink, but calmer than the previous ultramarine. */
       --button-accent: #b55f54;
       --line: rgba(231, 224, 211, 0.18);
@@ -149,20 +171,16 @@
       right: 0;
       z-index: 200;
       border-bottom: 1px solid transparent;
-      background: rgba(8,8,8,var(--header-bg-opacity,.72));
-      opacity: 1;
-      transition: background .25s ease, border-color .25s ease, backdrop-filter .25s ease, transform .35s ease, opacity .35s ease;
+      background: rgba(8,8,8,.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: background .25s ease, border-color .25s ease, height .25s ease;
     }
     .site-header.scrolled {
       --header-height: 72px;
-      /* After the first few scroll pixels only the adaptive navigation remains. */
-      background: rgba(8,8,8,var(--header-bg-opacity,0));
-      border-color: transparent;
-      /* Keep the navigation readable without turning the page below into frosted glass. */
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
+      background: rgba(8,8,8,.92);
+      border-color: var(--line);
     }
-    .site-header.hidden { transform:none; opacity:1; pointer-events:auto; }
     .nav {
       height: var(--header-height);
       display: flex;
@@ -174,37 +192,33 @@
     .logo {
       display: flex;
       align-items: center;
-      min-width: clamp(190px, 19vw, 270px);
-      height: 88px;
+      min-width: clamp(170px, 17vw, 240px);
+      height: 100%;
       flex: 0 0 auto;
-      transition: opacity .25s ease, transform .25s ease, min-width .25s ease, width .25s ease;
+      transition: min-width .25s ease;
     }
     .logo img {
-      width: clamp(190px, 19vw, 270px);
-      max-height: 84px;
+      width: clamp(170px, 17vw, 240px);
+      max-height: 72px;
       object-fit: contain;
       object-position: left center;
       filter: drop-shadow(0 3px 12px rgba(0,0,0,.55));
+      transition: width .25s ease, max-height .25s ease;
     }
-    .site-header.scrolled .logo { min-width:0; width:0; opacity:0; transform:translateY(-8px); pointer-events:none; overflow:hidden; }
-    .site-header.scrolled .nav { justify-content:flex-end; }
+    .site-header.scrolled .logo { min-width:clamp(140px, 13vw, 190px); }
+    .site-header.scrolled .logo img { width:clamp(140px, 13vw, 190px); max-height:52px; }
 
     .nav-links { display: flex; align-items: center; gap: clamp(18px, 2.2vw, 38px); }
     .nav-links a {
-      color: rgba(231,224,211,.68);
+      color: rgba(231,224,211,.82);
       font-size: clamp(11px, .82vw, 14px);
       font-weight: 800;
       letter-spacing: .12em;
       text-transform: uppercase;
       position: relative;
-      transition: color .35s ease;
-      /* A compact black keyline keeps the labels readable over Kai's portrait. */
-      -webkit-text-stroke: 1px #000;
-      text-stroke: 1px #000;
-      paint-order: stroke fill;
-      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      transition: color .2s ease;
     }
-    .site-header.scrolled .nav-links a { color: var(--bone); }
+    .nav-links a:hover { color: var(--bone); }
     .nav-links a:not(.nav-cta)::after {
       content: "";
       position: absolute;
@@ -216,8 +230,7 @@
       transition: right .2s ease;
     }
     .nav-links a:hover::after { right: 0; }
-    .nav-cta { border:1px solid var(--bone); padding:13px 16px; color:rgba(231,224,211,.78); transition:background .2s ease, color .2s ease, border-color .2s ease; -webkit-text-stroke:1px #000; text-stroke:1px #000; paint-order:stroke fill; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
-    .site-header.scrolled .nav-cta { color:var(--bone); }
+    .nav-cta { border:1px solid var(--bone); padding:13px 16px; color:var(--bone); transition:background .2s ease, color .2s ease, border-color .2s ease; }
     .nav-cta:hover { background:var(--bone); color:var(--ink); border-color:var(--bone); }
     .menu-toggle { display:none; min-width:44px; min-height:44px; background: none; border: 0; color: var(--bone); padding: 8px; cursor: pointer; text-shadow:0 1px 10px rgba(0,0,0,.68); }
     .menu-toggle span { display: block; width: 28px; height: 2px; background: currentColor; margin: 6px 0; }
@@ -261,6 +274,19 @@
       max-width: min(100%, 540px);
       text-wrap: balance;
       text-shadow: none;
+    }
+    .hero-seo-title {
+      margin: clamp(18px, 2.4vw, 30px) 0 0;
+      max-width: min(100%, 540px);
+      color: var(--bone);
+      font-family: var(--body);
+      font-size: clamp(16px, 1.5vw, 23px);
+      font-weight: 800;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      text-wrap: balance;
+      text-shadow: 0 2px 0 rgba(0,0,0,.85), 0 4px 14px rgba(0,0,0,.65);
     }
     .hero-title .line-one,
     .hero-title .line-two {
@@ -312,10 +338,8 @@
     }
     .btn-primary { background: var(--bone); border-color: var(--bone); border-bottom:3px solid var(--button-accent); color:var(--ink); }
     .btn-primary:hover { background: var(--button-accent); border-color:var(--button-accent); color:var(--bone); }
-    .btn-ghost { position:relative; border-color:rgba(231,224,211,.7); box-shadow:none; }
-    .btn-ghost::after { content:""; position:absolute; left:14px; right:14px; bottom:-1px; height:2px; background:var(--button-accent); transform:scaleX(.24); transform-origin:left; transition:transform .2s ease; }
+    .btn-ghost { border-color:rgba(231,224,211,.7); border-bottom:3px solid var(--button-accent); box-shadow:none; }
     .btn-ghost:hover { background:var(--button-accent); color:var(--bone); border-color:var(--button-accent); }
-    .btn-ghost:hover::after { transform:scaleX(1); }
 
     .section-head { display:grid; grid-template-columns: minmax(0,1.3fr) minmax(260px,.7fr); gap: 40px; align-items:end; margin-bottom: clamp(52px, 8vw, 100px); }
     .section-head > * { min-width:0; }
@@ -327,22 +351,22 @@
     .portfolio-social a { display:inline-flex; align-items:center; gap:9px; color:var(--bone); border-bottom:2px solid var(--button-accent); padding-bottom:6px; font-size:clamp(12px, .95vw, 15px); font-weight:900; letter-spacing:.11em; text-transform:uppercase; }
     .portfolio-social a:hover { color:var(--button-accent); }
 
-    .work-grid { display:grid; grid-template-columns:repeat(12,1fr); grid-auto-rows: minmax(110px, 7vw); gap:14px; }
-    .work-card { position:relative; overflow:hidden; border:1px solid rgba(231,224,211,.12); background:#111; min-height:360px; isolation:isolate; container-type:inline-size; }
-    .work-card:nth-child(n){ grid-column:span 4; grid-row:span 4; }
-    .work-art { position:absolute; inset:0; transition:transform .6s cubic-bezier(.2,.7,.2,1), filter .6s ease; }
-    .work-card:hover .work-art { transform:scale(1.04) rotate(.3deg); filter:contrast(1.12); }
-    /* A cool ink veil keeps the photo readable without the old black sink at the bottom. */
-    .work-card::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(18,27,45,.58) 0%,rgba(18,27,45,.22) 25%,transparent 58%); z-index:1; }
-    .work-info { position:absolute; inset:auto 22px 20px; z-index:2; display:flex; align-items:end; justify-content:space-between; gap:18px; }
-    .work-text { min-width:0; }
-    .work-info h3 { margin:0; font-family:var(--display); text-transform:uppercase; font-size:clamp(22px,11cqi,50px); line-height:.96; letter-spacing:-.015em; text-shadow:0 2px 0 rgba(0,0,0,.24), 0 4px 14px rgba(0,0,0,.72); }
-    .work-info p { margin:8px 0 0; color:#d7d0c5; text-transform:uppercase; letter-spacing:.14em; font-size:12px; text-shadow:0 1px 9px rgba(0,0,0,.82); }
-    .work-index { font-family:var(--serif); color:var(--ink-blue); font-size:clamp(18px,6.5cqi,38px); flex-shrink:0; }
-    .work-card svg { width:100%; height:100%; }
-    .work-photo { width:100%; height:100%; object-fit:cover; object-position:right center; filter:grayscale(.72) contrast(1.08); transition:filter .6s ease; }
-    .work-card:hover .work-photo { filter:grayscale(.08) contrast(1.08); }
-    .work-credit { margin:12px 0 0; color:#b7b0a6; font-size:10px; letter-spacing:.13em; line-height:1.5; text-transform:uppercase; }
+    .work-grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:clamp(20px, 2.6vw, 34px); }
+    /* Polaroid card: a square, cropped photo sits in a bone frame; the thicker
+       band below the photo carries the style name and a short description. */
+    .work-card { display:flex; flex-direction:column; background:var(--bone); padding:14px 14px 0; box-shadow:0 22px 46px rgba(0,0,0,.38); transition:transform .3s ease, box-shadow .3s ease; }
+    .work-card:hover { transform:translateY(-6px); box-shadow:0 30px 60px rgba(0,0,0,.48); }
+    .work-photo-frame { position:relative; aspect-ratio:1/1; overflow:hidden; background:#111; }
+    /* Source photos carry a branded panel on their left third with no usable
+       horizontal crop slack at cover scale (portrait 512x640 fills the square
+       frame's width exactly). Zoom in from the right edge to crop the panel
+       out rather than showing it inside the square. */
+    .work-photo { width:100%; height:100%; object-fit:cover; filter:grayscale(.72) contrast(1.08); transition:filter .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); transform:scale(1.55); transform-origin:100% 50%; }
+    .work-card:hover .work-photo { filter:grayscale(.08) contrast(1.08); transform:scale(1.62); transform-origin:100% 50%; }
+    .work-caption { padding:20px 6px 26px; }
+    .work-caption h3 { margin:0; font-family:var(--display); color:var(--ink); text-transform:uppercase; font-size:clamp(20px, 1.8vw, 27px); line-height:1; letter-spacing:-.01em; }
+    .work-caption p { margin:9px 0 0; color:#514b43; line-height:1.55; font-size:14px; }
+    .work-credit { margin:12px 0 0; color:#8f887c; font-size:10px; letter-spacing:.13em; line-height:1.5; text-transform:uppercase; }
 
     .about-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(36px,7vw,110px); align-items:center; }
     .about-grid > *, .contact-grid > * { min-width:0; }
@@ -403,7 +427,7 @@
     .visit-note { margin:22px 0 0; color:#514b43; line-height:1.6; }
     .visit-contact { display:inline-flex; align-items:center; gap:10px; margin-top:18px; color:var(--ink); font-weight:900; text-transform:uppercase; letter-spacing:.1em; font-size:12px; border-bottom:2px solid var(--button-accent); padding-bottom:7px; }
     .visit-contact:hover { color:var(--button-accent); }
-    .route-link { display:inline-flex; align-items:center; gap:10px; margin-top:26px; color:var(--ink); font-weight:900; text-transform:uppercase; letter-spacing:.1em; font-size:12px; border-bottom:2px solid var(--button-accent); padding-bottom:7px; }
+    .route-link { display:inline-flex; align-self:flex-start; align-items:center; gap:10px; margin-top:26px; color:var(--ink); font-weight:900; text-transform:uppercase; letter-spacing:.1em; font-size:12px; border-bottom:2px solid var(--button-accent); padding-bottom:7px; }
 
     .contact { background:var(--bone); color:var(--ink); }
     .contact .eyebrow { color:#575149; }
@@ -443,12 +467,12 @@
     .steps-action,
     .project-start-cta,
     .quick-contact { font-family:var(--body); font-weight:500; }
-    .work-info h3,
+    .work-caption h3,
     .step h3,
     .studio-card h2 { font-family:var(--body); font-weight:600; letter-spacing:.01em; }
     .lede,
     .hero-copy,
-    .work-info p,
+    .work-caption p,
     .about-copy p,
     .step p,
     .project-start-copy > p,
@@ -460,112 +484,6 @@
     .eyebrow,
     .work-credit,
     .fact span { font-weight:700; }
-
-    /* Desktop ink reveal: a quiet layer at the page edges and in unused black space.
-       It never sits above links or content and disappears for touch/reduced motion. */
-    /* The ink layer sits below page content, so a large flash can continue behind
-       transparent black space without ever obscuring copy, controls, or photos. */
-    .ink-reveal { position:absolute; top:0; left:0; right:0; height:var(--ink-page-height, 100vh); z-index:1; display:none; overflow:clip; pointer-events:none; --ink-blue:var(--ink-tattoo); --ink-blue-bright:var(--ink-tattoo-lit); --ink-blue-deep:var(--ink-tattoo-deep); }
-    .ink-asset-layer { position:absolute; inset:0; overflow:clip; pointer-events:none; }
-    .ink-rail {
-      position:absolute;
-      top:0;
-      bottom:0;
-      width:max(0px, calc((100vw - var(--max)) / 2));
-      overflow:hidden;
-      opacity:0;
-      mix-blend-mode:screen;
-      transition:opacity .18s ease;
-    }
-    .ink-rail-left { left:0; }
-    .ink-rail-right { right:0; }
-    .ink-rail.is-revealed { opacity:1; }
-    .ink-asset {
-      position:absolute;
-      top:0;
-      width:var(--asset-size, 120px);
-      /* Large motifs may continue beyond the viewport; main content remains above this layer. */
-      max-width:min(120vw, 1400px);
-      height:auto;
-      max-height:none;
-      --flash-x:50%;
-      --flash-y:50%;
-      --flash-core:clamp(28px, 3vw, 72px);
-      --flash-edge:clamp(88px, 10vw, 190px);
-      object-fit:contain;
-      opacity:0;
-      transform:translateY(-50%) rotate(var(--asset-rotation, 0deg));
-      transform-origin:center;
-      mix-blend-mode:screen;
-      /* Pull generated flash back into the same deep tattoo-blue register. */
-      filter:grayscale(.72) sepia(.58) hue-rotate(168deg) saturate(2.2) brightness(.72) drop-shadow(0 0 12px rgba(50,65,96,.24));
-      -webkit-mask-image:radial-gradient(circle at var(--flash-x) var(--flash-y), #000 0 var(--flash-core), rgba(0,0,0,.72) calc(var(--flash-core) + 18px), transparent var(--flash-edge));
-      mask-image:radial-gradient(circle at var(--flash-x) var(--flash-y), #000 0 var(--flash-core), rgba(0,0,0,.72) calc(var(--flash-core) + 18px), transparent var(--flash-edge));
-      /* Hold the lit fragment briefly, then let it dissolve like ink in water. */
-      transition:opacity 1.8s cubic-bezier(.2,.7,.2,1) 3.4s, transform 1.9s cubic-bezier(.2,.7,.2,1) 3.4s;
-    }
-    .ink-asset.asset-left { left:7px; }
-    .ink-asset.asset-right { right:7px; }
-    .ink-asset.is-revealed {
-      opacity:var(--asset-opacity, .82);
-      transform:translateY(-50%) rotate(var(--asset-rotation, 0deg)) scale(1.02);
-      transition:opacity .22s ease .08s, transform .28s ease .08s;
-    }
-    .ink-rail svg {
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      overflow:visible;
-      filter:drop-shadow(0 0 14px rgba(50,65,96,.18));
-      -webkit-mask-image:radial-gradient(circle at var(--reveal-x,50%) var(--reveal-y,50%), #000 0 66px, transparent 180px);
-      mask-image:radial-gradient(circle at var(--reveal-x,50%) var(--reveal-y,50%), #000 0 66px, transparent 180px);
-    }
-    .ink-motif {
-      display:none;
-      transform:translateY(var(--motif-shift,0vh)) rotate(var(--motif-rotation,0deg)) scale(var(--motif-scale,1));
-      transform-origin:50% 50%;
-    }
-    .ink-rail.variant-0 .motif-mandala,
-    .ink-rail.variant-1 .motif-fineline,
-    .ink-rail.variant-2 .motif-blackwork { display:block; }
-    @media (min-width:1024px) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
-      .ink-reveal { display:block; }
-    }
-
-    .ink-gap-reveal {
-      display:none;
-      position:relative;
-      height:clamp(78px, 8vw, 126px);
-      overflow:hidden;
-      background:var(--ink);
-      border-block:1px solid rgba(231,224,211,.12);
-    }
-    .ink-gap-asset {
-      position:absolute;
-      top:50%;
-      left:50%;
-      width:min(var(--gap-size, 160px), calc(100% - 40px));
-      max-height:calc(100% - 16px);
-      height:auto;
-      object-fit:contain;
-      --flash-x:50%;
-      --flash-y:50%;
-      --flash-core:clamp(22px, 3vw, 58px);
-      --flash-edge:clamp(70px, 9vw, 140px);
-      opacity:0;
-      pointer-events:none;
-      transform:translate(-50%,-50%) rotate(var(--gap-rotation,0deg));
-      filter:grayscale(.72) sepia(.58) hue-rotate(168deg) saturate(2.2) brightness(.72) drop-shadow(0 0 14px rgba(50,65,96,.3));
-      -webkit-mask-image:radial-gradient(circle at var(--flash-x) var(--flash-y), #000 0 var(--flash-core), rgba(0,0,0,.72) calc(var(--flash-core) + 14px), transparent var(--flash-edge));
-      mask-image:radial-gradient(circle at var(--flash-x) var(--flash-y), #000 0 var(--flash-core), rgba(0,0,0,.72) calc(var(--flash-core) + 14px), transparent var(--flash-edge));
-      transition:opacity 1.8s cubic-bezier(.2,.7,.2,1) 3.4s, transform 1.9s cubic-bezier(.2,.7,.2,1) 3.4s;
-      mix-blend-mode:screen;
-    }
-    .ink-gap-asset.is-revealed { opacity:.78; transform:translate(-50%,-50%) rotate(var(--gap-rotation,0deg)) scale(1.03); transition:opacity .22s ease .08s, transform .28s ease .08s; }
-    @media (min-width:1024px) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
-      .ink-gap-reveal { display:block; }
-    }
 
     .reveal { opacity:1; transform:none; }
     .js .reveal { opacity:0; transform:translateY(28px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1); }
@@ -621,7 +539,7 @@
       .request-steps { grid-template-columns:repeat(3,1fr); }
       .studio-grid { grid-template-columns:1fr; }
       .studio-card { min-height:520px; }
-      .work-card:nth-child(n) { grid-column:span 6; grid-row:span 4; }
+      .work-grid { grid-template-columns:repeat(2, minmax(0,1fr)); }
     }
 
     @media (max-width: 840px) {
@@ -661,8 +579,7 @@
       .hero-title .line-two { margin-left:0; }
       .hero-subtitle { margin-top:20px; font-size:12px; letter-spacing:.18em; }
       .hero-bottom { margin-top:34px; }
-      .work-grid { display:grid; grid-template-columns:1fr; grid-auto-rows:auto; }
-      .work-card:nth-child(n) { grid-column:auto; grid-row:auto; min-height:440px; }
+      .work-grid { grid-template-columns:1fr; }
       .facts { grid-template-columns:1fr; }
       .fact:last-child { grid-column:auto; }
       .request-steps { grid-template-columns:1fr; }
@@ -713,7 +630,8 @@
       <div class="hero-photo" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-heading">
-          <h1 class="hero-title" id="hero-title" lang="en" aria-label="Your story, my craft"><span class="line-one" aria-hidden="true">Your story</span><span class="line-two" aria-hidden="true">My craft</span></h1>
+          <p class="hero-title" id="hero-claim" lang="en" aria-label="Your story, my craft"><span class="line-one" aria-hidden="true">Your story</span><span class="line-two" aria-hidden="true">My craft</span></p>
+          <h1 class="hero-seo-title" id="hero-title">Individuelle Tattoos in Lippstadt</h1>
           <p class="hero-subtitle" lang="en">Tattooing since 2006</p>
         </div>
         <div class="hero-bottom">
@@ -739,57 +657,50 @@
 
         <div class="work-grid">
           <article class="work-card reveal">
-            <div class="work-art">
-              <img class="work-photo" src="assets/kai-botanical-blossom.jpg" alt="Florales Tattoo mit kräftiger Schattierung aus meinem Portfolio" width="513" height="640" loading="lazy" decoding="async" />
+            <div class="work-photo-frame">
+              <img class="work-photo" src="assets/kai-botanical-blossom.jpg" alt="Florales Tattoo mit kräftiger Schattierung aus meinem Portfolio" width="640" height="640" loading="lazy" decoding="async" />
             </div>
-            <div class="work-info"><div class="work-text"><h3>Blackwork</h3><p>Satte Flächen, starke Silhouetten und klare Kontraste.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div><div class="work-index" aria-hidden="true">01</div></div>
+            <div class="work-caption"><h3>Blackwork</h3><p>Satte Flächen, starke Silhouetten und klare Kontraste.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div>
           </article>
 
           <article class="work-card reveal">
-            <div class="work-art">
-              <img class="work-photo" src="assets/kai-dotwork-sunmoon.jpg" alt="Kleines Sonnen- und Mondtattoo mit Dotwork-Details aus meinem Portfolio" width="512" height="640" loading="lazy" decoding="async" />
+            <div class="work-photo-frame">
+              <img class="work-photo" src="assets/kai-dotwork-sunmoon.jpg" alt="Kleines Sonnen- und Mondtattoo mit Dotwork-Details aus meinem Portfolio" width="640" height="640" loading="lazy" decoding="async" />
             </div>
-            <div class="work-info"><div class="work-text"><h3>Dotwork</h3><p>Tiefe und Struktur aus präzise gesetzten Punkten.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div><div class="work-index" aria-hidden="true">02</div></div>
+            <div class="work-caption"><h3>Dotwork</h3><p>Tiefe und Struktur aus präzise gesetzten Punkten.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div>
           </article>
 
           <article class="work-card reveal">
-            <div class="work-art">
-              <img class="work-photo" src="assets/kai-fineline-botanical.jpg" alt="Feines botanisches Linienmotiv an einem Unterarm aus meinem Portfolio" width="512" height="640" loading="lazy" decoding="async" />
+            <div class="work-photo-frame">
+              <img class="work-photo" src="assets/kai-fineline-botanical.jpg" alt="Feines botanisches Linienmotiv an einem Unterarm aus meinem Portfolio" width="640" height="640" loading="lazy" decoding="async" />
             </div>
-            <div class="work-info"><div class="work-text"><h3>Fineline</h3><p>Detailreiche Motive mit Linie, Haut und Freiraum.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div><div class="work-index" aria-hidden="true">03</div></div>
+            <div class="work-caption"><h3>Fineline</h3><p>Detailreiche Motive mit Linie, Haut und Freiraum.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div>
           </article>
 
           <article class="work-card reveal">
-            <div class="work-art">
-              <img class="work-photo" src="assets/kai-mandala-floral.jpg" alt="Symmetrisches florales Ornament auf einem Unterarm aus meinem Portfolio" width="512" height="640" loading="lazy" decoding="async" />
+            <div class="work-photo-frame">
+              <img class="work-photo" src="assets/kai-mandala-floral.jpg" alt="Symmetrisches florales Ornament auf einem Unterarm aus meinem Portfolio" width="640" height="640" loading="lazy" decoding="async" />
             </div>
-            <div class="work-info"><div class="work-text"><h3>Mandala</h3><p>Radiale Ordnung, Rhythmus und Dichte im Zentrum.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div><div class="work-index" aria-hidden="true">04</div></div>
+            <div class="work-caption"><h3>Mandala</h3><p>Radiale Ordnung, Rhythmus und Dichte im Zentrum.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div>
           </article>
 
           <article class="work-card reveal">
-            <div class="work-art">
-              <img class="work-photo" src="assets/kai-blackwork-clock.jpg" alt="Ornamentales Uhren- und Datummotiv aus meinem Portfolio" width="512" height="640" loading="lazy" decoding="async" />
+            <div class="work-photo-frame">
+              <img class="work-photo" src="assets/kai-blackwork-clock.jpg" alt="Ornamentales Uhren- und Datummotiv aus meinem Portfolio" width="640" height="640" loading="lazy" decoding="async" />
             </div>
-            <div class="work-info"><div class="work-text"><h3>Lettering</h3><p>Schriftzüge mit eigener Formensprache.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div><div class="work-index" aria-hidden="true">05</div></div>
+            <div class="work-caption"><h3>Lettering</h3><p>Schriftzüge mit eigener Formensprache.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div>
           </article>
 
           <article class="work-card reveal">
-            <div class="work-art">
-              <img class="work-photo" src="assets/kai-fine-dragonfly.jpg" alt="Florales Linienmotiv mit Libelle aus meinem Portfolio" width="512" height="640" loading="lazy" decoding="async" />
+            <div class="work-photo-frame">
+              <img class="work-photo" src="assets/kai-fine-dragonfly.jpg" alt="Florales Linienmotiv mit Libelle aus meinem Portfolio" width="640" height="640" loading="lazy" decoding="async" />
             </div>
-            <div class="work-info"><div class="work-text"><h3>Fineline &amp; Dotwork</h3><p>Feine Linien und punktierte Schattierung mit viel Freiraum.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div><div class="work-index" aria-hidden="true">06</div></div>
+            <div class="work-caption"><h3>Fineline &amp; Dotwork</h3><p>Feine Linien und punktierte Schattierung mit viel Freiraum.</p><p class="work-credit">Originalarbeit · Instagram-Portfolio</p></div>
           </article>
         </div>
         <p class="portfolio-social portfolio-social-bottom"><a href="https://www.instagram.com/kai_th_tattoo" target="_blank" rel="noopener noreferrer" aria-label="Weitere echte Arbeiten von Kai auf Instagram ansehen, öffnet in einem neuen Tab">Weitere Arbeiten auf Instagram · @kai_th_tattoo <span aria-hidden="true">↗</span></a></p>
       </div>
     </section>
-
-    <div class="ink-gap-reveal" id="ink-gap-portfolio-about" aria-hidden="true">
-      <img class="ink-gap-asset" data-gap-asset="16" src="assets/ink-reveal-16.webp" alt="" width="512" height="768" />
-      <img class="ink-gap-asset" data-gap-asset="17" src="assets/ink-reveal-17.webp" alt="" width="512" height="768" />
-      <img class="ink-gap-asset" data-gap-asset="18" src="assets/ink-reveal-18.webp" alt="" width="512" height="768" />
-      <img class="ink-gap-asset" data-gap-asset="19" src="assets/ink-reveal-19.webp" alt="" width="512" height="768" />
-    </div>
 
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
@@ -855,70 +766,6 @@
     </section>
   </main>
 
-  <div class="ink-reveal" aria-hidden="true">
-    <div class="ink-rail ink-rail-left">
-      <svg viewBox="0 0 200 900" preserveAspectRatio="none" focusable="false">
-        <g class="ink-motif motif-mandala" data-motif="mandala">
-          <circle cx="100" cy="450" r="142" fill="none" stroke="var(--ink-blue)" stroke-width="3" opacity=".55" />
-          <circle cx="100" cy="450" r="102" fill="none" stroke="var(--ink-blue-bright)" stroke-width="1.5" opacity=".75" />
-          <path d="M100 282C143 330 161 380 161 450s-18 120-61 168c-43-48-61-98-61-168s18-120 61-168Z" fill="none" stroke="var(--ink-blue)" stroke-width="8" opacity=".75" />
-          <path d="M100 282C57 330 39 380 39 450s18 120 61 168c43-48 61-98 61-168s-18-120-61-168Z" fill="none" stroke="var(--ink-blue-bright)" stroke-width="2" opacity=".8" />
-          <circle cx="100" cy="450" r="26" fill="var(--ink-blue-deep, #091247)" stroke="var(--ink-blue-bright)" stroke-width="3" />
-        </g>
-        <g class="ink-motif motif-fineline" data-motif="fineline">
-          <path d="M100 680C92 560 95 484 100 400c5-84 8-160 0-250" fill="none" stroke="var(--ink-blue-bright)" stroke-width="2" />
-          <path d="M100 570C54 548 31 508 30 464c43 2 69 28 70 106ZM100 520c42-18 68-51 71-96-42 3-66 29-71 96ZM100 421c-37-17-57-46-59-82 37 2 56 26 59 82ZM100 366c34-15 52-39 56-74-34 2-52 24-56 74Z" fill="none" stroke="var(--ink-blue)" stroke-width="2.5" />
-          <circle cx="100" cy="680" r="5" fill="var(--ink-blue-bright)" />
-        </g>
-        <g class="ink-motif motif-blackwork" data-motif="blackwork">
-          <path d="M30 300h140l-26 64H56zM20 410h160l-28 70H48zM40 530h120l-22 54H62z" fill="var(--ink-blue-deep, #091247)" stroke="var(--ink-blue-bright)" stroke-width="3" />
-          <path d="M42 650c28-70 88-92 116-30-30 28-72 48-116 30ZM42 650c44 18 86-2 116-30" fill="none" stroke="var(--ink-blue)" stroke-width="18" />
-        </g>
-      </svg>
-    </div>
-    <div class="ink-rail ink-rail-right">
-      <svg viewBox="0 0 200 900" preserveAspectRatio="none" focusable="false">
-        <g class="ink-motif motif-mandala" data-motif="mandala">
-          <circle cx="100" cy="450" r="142" fill="none" stroke="var(--ink-blue)" stroke-width="3" opacity=".55" />
-          <circle cx="100" cy="450" r="102" fill="none" stroke="var(--ink-blue-bright)" stroke-width="1.5" opacity=".75" />
-          <path d="M100 282C143 330 161 380 161 450s-18 120-61 168c-43-48-61-98-61-168s18-120 61-168Z" fill="none" stroke="var(--ink-blue)" stroke-width="8" opacity=".75" />
-          <path d="M100 282C57 330 39 380 39 450s18 120 61 168c43-48 61-98 61-168s-18-120-61-168Z" fill="none" stroke="var(--ink-blue-bright)" stroke-width="2" opacity=".8" />
-          <circle cx="100" cy="450" r="26" fill="var(--ink-blue-deep, #091247)" stroke="var(--ink-blue-bright)" stroke-width="3" />
-        </g>
-        <g class="ink-motif motif-fineline" data-motif="fineline">
-          <path d="M100 680C92 560 95 484 100 400c5-84 8-160 0-250" fill="none" stroke="var(--ink-blue-bright)" stroke-width="2" />
-          <path d="M100 570C54 548 31 508 30 464c43 2 69 28 70 106ZM100 520c42-18 68-51 71-96-42 3-66 29-71 96ZM100 421c-37-17-57-46-59-82 37 2 56 26 59 82ZM100 366c34-15 52-39 56-74-34 2-52 24-56 74Z" fill="none" stroke="var(--ink-blue)" stroke-width="2.5" />
-          <circle cx="100" cy="680" r="5" fill="var(--ink-blue-bright)" />
-        </g>
-        <g class="ink-motif motif-blackwork" data-motif="blackwork">
-          <path d="M30 300h140l-26 64H56zM20 410h160l-28 70H48zM40 530h120l-22 54H62z" fill="var(--ink-blue-deep, #091247)" stroke="var(--ink-blue-bright)" stroke-width="3" />
-          <path d="M42 650c28-70 88-92 116-30-30 28-72 48-116 30ZM42 650c44 18 86-2 116-30" fill="none" stroke="var(--ink-blue)" stroke-width="18" />
-        </g>
-      </svg>
-    </div>
-    <div class="ink-asset-layer" aria-hidden="true">
-      <img class="ink-asset asset-left" data-doc-ratio=".04" data-asset-size="880" src="assets/ink-reveal-01.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-right" data-doc-ratio=".10" data-asset-size="260" src="assets/ink-reveal-02.webp" alt="" width="512" height="512" />
-      <img class="ink-asset asset-left" data-doc-ratio=".16" data-asset-size="220" src="assets/ink-reveal-03.webp" alt="" width="512" height="512" />
-      <img class="ink-asset asset-right" data-doc-ratio=".22" data-asset-size="280" src="assets/ink-reveal-04.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-left" data-doc-ratio=".28" data-asset-size="720" src="assets/ink-reveal-05.webp" alt="" width="512" height="512" />
-      <img class="ink-asset asset-right" data-doc-ratio=".34" data-asset-size="240" src="assets/ink-reveal-06.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-left" data-doc-ratio=".40" data-asset-size="220" src="assets/ink-reveal-07.webp" alt="" width="512" height="512" />
-      <img class="ink-asset asset-right" data-doc-ratio=".46" data-asset-size="300" src="assets/ink-reveal-08.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-left" data-doc-ratio=".52" data-asset-size="250" src="assets/ink-reveal-09.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-right" data-doc-ratio=".58" data-asset-size="1100" src="assets/ink-reveal-10.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-left" data-doc-ratio=".64" data-asset-size="220" src="assets/ink-reveal-11.webp" alt="" width="512" height="512" />
-      <img class="ink-asset asset-right" data-doc-ratio=".69" data-asset-size="260" src="assets/ink-reveal-12.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-left" data-doc-ratio=".74" data-asset-size="260" src="assets/ink-reveal-13.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-right" data-doc-ratio=".79" data-asset-size="760" src="assets/ink-reveal-14.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-left" data-doc-ratio=".84" data-asset-size="220" src="assets/ink-reveal-15.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-right" data-doc-ratio=".88" data-asset-size="1200" src="assets/ink-reveal-16.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-left" data-doc-ratio=".91" data-asset-size="240" src="assets/ink-reveal-17.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-right" data-doc-ratio=".95" data-asset-size="800" src="assets/ink-reveal-18.webp" alt="" width="512" height="768" />
-      <img class="ink-asset asset-left" data-doc-ratio=".98" data-asset-size="220" src="assets/ink-reveal-19.webp" alt="" width="512" height="768" />
-    </div>
-  </div>
-
   <a class="quick-contact" href="https://wa.me/4915174128106" target="_blank" rel="noopener noreferrer" aria-label="Anfrage über WhatsApp öffnen, öffnet in einem neuen Tab">Anfrage senden <span aria-hidden="true">↗</span></a>
 
   <footer>
@@ -939,18 +786,8 @@
     const navLinks = document.getElementById('navLinks');
     const mobileNavigation = matchMedia('(max-width: 1000px)');
 
-    const headerFadeStart = 8;
-    const headerFadeEnd = 180;
     const setHeaderState = () => {
-      const y = window.scrollY;
-      const menuOpen = navLinks.classList.contains('open');
-      const focusInHeader = header.contains(document.activeElement);
-      const fade = 1 - Math.min(1, Math.max(0, (y - headerFadeStart) / (headerFadeEnd - headerFadeStart)));
-      const backgroundOpacity = .72 * fade;
-      header.style.setProperty('--header-bg-opacity', backgroundOpacity.toFixed(3));
-      header.classList.toggle('scrolled', y > 8);
-      header.classList.remove('hidden');
-      if (menuOpen || focusInHeader) header.style.setProperty('--header-bg-opacity', '.72');
+      header.classList.toggle('scrolled', window.scrollY > 8);
     };
     setHeaderState();
     addEventListener('scroll', setHeaderState, { passive: true });
@@ -998,140 +835,6 @@
     });
     mobileNavigation.addEventListener?.('change', syncMenuAccessibility);
     syncMenuAccessibility();
-
-    const inkReveal = document.querySelector('.ink-reveal');
-    const inkRails = inkReveal ? [...inkReveal.querySelectorAll('.ink-rail')] : [];
-    const inkAssets = inkReveal ? [...inkReveal.querySelectorAll('.ink-asset')] : [];
-    const inkGap = document.querySelector('.ink-gap-reveal');
-    const inkGapAssets = inkGap ? [...inkGap.querySelectorAll('.ink-gap-asset')] : [];
-    const inkRevealMedia = matchMedia('(min-width:1024px) and (pointer:fine) and (prefers-reduced-motion:no-preference)');
-    let inkFrame = 0;
-    let inkPoint = null;
-    let activeInkTarget = null;
-    let inkAssetMetrics = [];
-    let inkGapMetric = null;
-    const setInkTarget = target => {
-      /* Avoid toggling all 19 images on every pointermove. The repeated style
-         writes were the main source of the choppy flashlight effect. */
-      if (activeInkTarget !== target) {
-        inkAssets.forEach(asset => asset.classList.toggle('is-revealed', asset === target));
-        inkGapAssets.forEach(asset => asset.classList.toggle('is-revealed', asset === target));
-        inkRails.forEach(rail => rail.classList.remove('is-revealed'));
-        activeInkTarget = target;
-      }
-      if (!target || !inkPoint) return;
-      const metric = inkAssetMetrics.find(item => item.asset === target);
-      const rect = metric
-        ? { left: metric.left, top: metric.docTop - scrollY, width: metric.width, height: metric.height }
-        : target.getBoundingClientRect();
-      const x = Math.max(0, Math.min(100, ((inkPoint.x - rect.left) / Math.max(1, rect.width)) * 100));
-      const y = Math.max(0, Math.min(100, ((inkPoint.y - rect.top) / Math.max(1, rect.height)) * 100));
-      target.style.setProperty('--flash-x', `${x.toFixed(2)}%`);
-      target.style.setProperty('--flash-y', `${y.toFixed(2)}%`);
-    };
-    const hideInkAssets = () => {
-      setInkTarget(null);
-    };
-    const clearInk = () => {
-      inkPoint = null;
-      hideInkAssets();
-    };
-    const randomizeInk = () => {
-      const ratios = inkAssets.map(asset => Number.parseFloat(asset.dataset.docRatio || '0'))
-        .sort(() => Math.random() - .5);
-      inkAssets.forEach((asset, index) => {
-        asset.dataset.docRatio = ratios[index].toFixed(3);
-        asset.style.setProperty('--asset-rotation', `${Math.round(Math.random() * 38 - 19)}deg`);
-        asset.style.setProperty('--asset-opacity', (0.58 + Math.random() * .24).toFixed(2));
-      });
-      inkGapAssets.forEach(asset => {
-        asset.classList.remove('is-revealed');
-        asset.dataset.active = 'false';
-        asset.style.setProperty('--gap-rotation', `${Math.round(Math.random() * 30 - 15)}deg`);
-      });
-      if (inkGapAssets.length) inkGapAssets[Math.floor(Math.random() * inkGapAssets.length)].dataset.active = 'true';
-    };
-    const layoutInk = () => {
-      /* Measure the real content boundary, excluding this absolute reveal layer.
-         Using document.scrollHeight here made the layer measure itself and added
-         a second, empty scroll range at the bottom of the page. */
-      const footer = document.querySelector('footer');
-      const contentBottom = footer
-        ? footer.getBoundingClientRect().bottom + scrollY
-        : document.querySelector('main')?.getBoundingClientRect().bottom + scrollY || innerHeight;
-      const pageHeight = Math.max(innerHeight, Math.ceil(contentBottom));
-      inkReveal.style.setProperty('--ink-page-height', `${pageHeight}px`);
-      /* Size is no longer limited to the narrow gutter: the layer is behind main,
-         while the pointer test below still rejects content surfaces. The top
-         position is document-anchored and therefore does not change on scroll. */
-      /* Keep room for oversize, vertical fragments: only the edge slice is meant
-         to be discovered, while the content stack stays above the reveal layer. */
-      const safeCanvas = Math.max(80, innerWidth * 1.12);
-      inkAssets.forEach(asset => {
-        const baseSize = Number.parseFloat(asset.dataset.assetSize || '120');
-        const ratio = Number.parseFloat(asset.dataset.docRatio || '0');
-        asset.style.setProperty('--asset-size', `${Math.min(baseSize, safeCanvas)}px`);
-        asset.style.top = `${ratio * pageHeight}px`;
-      });
-      /* Cache document-anchored geometry once per layout, not once per frame. */
-      inkAssetMetrics = inkAssets.map(asset => {
-        const rect = asset.getBoundingClientRect();
-        return { asset, left: rect.left, width: rect.width, height: rect.height, docTop: rect.top + scrollY };
-      });
-      if (inkGap) {
-        const rect = inkGap.getBoundingClientRect();
-        inkGapMetric = { left: rect.left, width: rect.width, height: rect.height, docTop: rect.top + scrollY };
-      }
-    };
-    const paintInk = () => {
-      inkFrame = 0;
-      if (!inkRevealMedia.matches || !inkPoint) { clearInk(); return; }
-      /* Keep a usable edge zone even when the viewport is narrower than the
-         max content width. Previously this required a 1540px viewport plus
-         outer gutters, so the feature silently disappeared in normal windows. */
-      const edgeRail = Math.max(32, Math.min(128, innerWidth * .09));
-      const gapTop = inkGapMetric ? inkGapMetric.docTop - scrollY : 0;
-      const gapBottom = inkGapMetric ? gapTop + inkGapMetric.height : 0;
-      const overGap = inkGapMetric && inkPoint.y >= gapTop && inkPoint.y <= gapBottom;
-      if (overGap) {
-        const activeGap = inkGapAssets.find(asset => asset.dataset.active === 'true');
-        setInkTarget(activeGap || null);
-        return;
-      }
-      const onLeft = inkPoint.x < edgeRail;
-      const onRight = inkPoint.x > innerWidth - edgeRail;
-      if (!onLeft && !onRight) { setInkTarget(null); return; }
-      const surface = document.elementFromPoint(inkPoint.x, inkPoint.y);
-      const protectedSurface = surface?.closest('h1, h2, h3, h4, h5, p, li, figure, img, video, a, button, input, textarea, select, .work-card, .about-photo, .studio-image, .hero-photo, .studio-card, .contact, footer');
-      if (protectedSurface) { setInkTarget(null); return; }
-      const candidates = inkAssetMetrics.filter(metric => {
-        const { asset } = metric;
-        const isCorrectSide = onLeft ? asset.classList.contains('asset-left') : asset.classList.contains('asset-right');
-        if (!isCorrectSide) return false;
-        const pad = 26;
-        const top = metric.docTop - scrollY;
-        return inkPoint.y >= top - pad && inkPoint.y <= top + metric.height + pad && inkPoint.x >= metric.left - pad && inkPoint.x <= metric.left + metric.width + pad;
-      });
-      candidates.sort((a, b) => Math.abs((a.docTop - scrollY) - inkPoint.y) - Math.abs((b.docTop - scrollY) - inkPoint.y));
-      setInkTarget(candidates[0]?.asset || null);
-    };
-    const moveInk = event => {
-      if (!inkRevealMedia.matches) return;
-      inkPoint = { x: event.clientX, y: event.clientY };
-      if (!inkFrame) inkFrame = requestAnimationFrame(paintInk);
-    };
-    if (inkReveal && inkAssets.length) {
-      randomizeInk();
-      layoutInk();
-      addEventListener('pointermove', moveInk, { passive: true });
-      addEventListener('pointerout', event => { if (!event.relatedTarget) clearInk(); }, { passive: true });
-      addEventListener('blur', clearInk);
-      addEventListener('scroll', () => { if (inkPoint && !inkFrame) inkFrame = requestAnimationFrame(paintInk); }, { passive: true });
-      addEventListener('resize', () => { clearInk(); layoutInk(); });
-      inkRevealMedia.addEventListener?.('change', () => { clearInk(); randomizeInk(); layoutInk(); });
-      document.fonts?.ready.then(layoutInk);
-      addEventListener('load', layoutInk, { once:true });
-    }
 
     const revealItems = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
